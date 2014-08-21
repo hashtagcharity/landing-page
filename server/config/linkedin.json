@@ -1,0 +1,9 @@
+{
+	"linkedin":{
+		"appName": "ToBeFilled",
+		"apiKey": "ToBeFilled",
+		"secretKey": "ToBeFilled",
+		"scopes": ["r_fullprofile", "r_emailaddress", "r_contactinfo"],
+		"fields": ["first-name", "last-name", "picture-url", "industry", "summary", "specialties", "skills", "public-profile-url"]
+	}
+}

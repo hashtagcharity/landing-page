@@ -1,0 +1,470 @@
+@require '../../abstract/styles/spacing'
+@require '../../abstract/styles/colors'
+@require '../../abstract/styles/appearance'
+@require '../../abstract/styles/design'
+
+@require 'fonts'
+@require 'animation'
+
+padder(top, bottom)
+	padding-top top
+	padding-bottom bottom
+
+marger(top, right, bottom, left)
+	margin-top top
+	margin-right right
+	margin-bottom bottom
+	margin-left left
+
+.mobile-breaker
+	+mobile()
+		column(1/1)
+
+.popup-general
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+	-moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+	box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+	border-bottom-left-radius 5px
+
+.weaver
+	+mobile()
+		display none
+	+tablet()
+		display none
+	position fixed
+	top 50%
+	right 0
+	z-index 999
+
+.weaver-arrow, .weaver-content
+	float right
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+	-moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+	box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15)
+
+.weaver-content
+	position relative
+	border-bottom-left-radius 5px
+	padding-left 15px
+	padding-right 15px
+	padding-bottom 10px
+	padding-top 5px
+
+.weaver-arrow
+	border-bottom-left-radius 5px
+	border-top-left-radius 5px
+	padding 15px
+
+.weaner-indiegogo
+	margin-top 15px
+	background-image url(/media/indiegogo.svg)
+	width 100%
+	height 7rem
+
+.ad
+	max-width 1800px
+	margin-left auto
+	margin-right auto
+	height 100%
+	position relative
+	overflow-x hidden
+	-webkit-overflow-scrolling touch
+
+.page
+	center(100%)
+	padder( 125px, 150px )
+	position relative
+
+.page-menu
+	center(100%)
+	+below(768px)
+		display none
+
+.page-video
+	position relative
+	center(100%)
+	+mobile()
+		padder( 0px, 100px )
+	+desktop()
+		height 100%
+	overflow hidden
+
+.page-reasons
+	padder( 125px, 0px )
+
+.page-app
+	padder( 125px, 0px )
+
+.page-testimonials
+	padder( 125px, 175px )
+
+.page-team
+	padder( 125px, 175px )
+
+.page-interest
+	padder( 125px, 100px )
+
+.video-container
+	position absolute
+	top 0px
+	left 0px
+	right 0
+	bottom 0
+	height 100%
+	width 100%
+	overflow hidden
+
+.video-overlay
+	z-index 1
+	position relative
+	marger(25px, 0, 0, 0)
+	+mobile()
+		marger(0, 0, 0, 0)
+
+.video-container
+	z-index 0
+	background-image url(/media/video_background.png)
+
+.video-container video
+	position absolute
+	top 0
+	right 0
+	bottom 0
+	left 0
+	z-index 1
+	display block
+	left 50%
+	-webkit-transform translateX(-50%)
+	-moz-transform translateX(-50%)
+	-ms-transform translateX(-50%)
+	-o-transform translateX(-50%)
+	transform translateX(-50%)
+	min-height 100%
+	min-width 100%
+	-webkit-transition opacity 1s 0.3s
+	-webkit-transition-delay linear
+	-moz-transition opacity 1s 0.3s linear
+	-o-transition opacity 1s 0.3s linear
+	transition opacity 1s 0.3s linear
+
+
+.menu-link
+	column(1/7)
+	+mobile()
+		column(1/4)
+	padder( 25px, 25px )
+
+
+.logo
+	+mobile()
+		center(70%)
+		height 125px
+	+tablet()
+		center(40%)
+		height 100px
+	+desktop()
+		center(25%)
+		height 125px
+	image '/media/charity_logo.png'
+	padder( 100px, 25px )
+	+mobile()
+		padder( 50px, 25px )
+
+.video-mantra
+	+tablet()
+		padder( 75px, 150px )
+	+desktop()
+		padder( 75px, 100px )
+
+.video-button
+	+tablet()
+		padder( 75px, 150px )
+	+desktop()
+		padder( 75px, 100px )
+
+.team
+	+tablet()
+		.team-card:nth-child( 2n+1 )
+			column(5/17, offset: 1/17)
+	+desktop()
+		.team-card:nth-child( 1 )
+			column(5/17, offset: 1/17)
+	padder( 50px, 0px )
+
+.team-card
+	column(5/17)
+	+mobile()
+		column(1/1)
+	+tablet()
+		column(5/17)
+
+.team-card-img, .team-card-content, .achieved-content
+	margin 5px
+
+.team-card-content
+	margin-top 0px
+	padding-bottom 25px
+	border-radius 3px
+
+.team-card-img
+	height 200px
+	margin-bottom 0px
+	border-top-left-radius 3px
+	border-top-right-radius 3px
+
+.jozsef
+	image '/media/jozsef.jpg'
+
+.zsuzsa
+	image '/media/zsuzsa.jpg'
+
+.francois
+	image '/media/francois.jpg'
+
+.imre
+	image '/media/imre.jpg'
+
+.motto
+	+tablet()
+		height 75px
+	+desktop()
+		height 75px
+
+.narrower
+	padding-left 10px
+	padding-right 10px
+
+.achieved
+	column(1/2, offset: 1/4)
+	+mobile()
+		column(1/1)
+	+tablet()
+		column(2/3, offset: 1/6)
+
+.campaign-link
+	column(1/4, offset: 3/8)
+	+mobile()
+		column(1/2, offset: 1/4)
+	+tablet()
+		column(1/3, offset: 2/6)
+	margin-top 25px
+	margin-bottom 50px
+
+.reasonings
+	column(2/3, offset: 1/6)
+	+mobile()
+		column(1/1)
+	+tablet()
+		column(1/1)
+	margin-top 25px
+
+.reason-card
+	column(4/13)
+	+mobile()
+		column(1/1)
+
+.reason-card-content
+	margin 15px
+	margin-top 75px
+
+.testimonial
+	column(1/2, offset: 1/4)
+	+mobile()
+		column(1/1)
+	+tablet()
+		column(2/3, offset: 1/6)
+	margin-top 100px
+
+.testimonial-content
+	center(100%)
+	border-radius 3px
+
+.testimonial-intro, .testimonial-descs, .testimonial-link
+	column(1/1)
+	margin-top 25px
+
+.testimonial-link
+	border-bottom-left-radius 5px
+	border-bottom-right-radius 5px
+
+.testimonial-descs
+	+desktop()
+		.test-desc:nth-child( 1 )
+			column(6/19, offset: 1/38)
+
+.test-desc
+	column(6/19)
+	+tablet()
+		column(9/10, offset: 1/20)
+	+mobile()
+		column(9/10, offset: 1/20)
+	margin-top 25px
+
+.testimonial-link
+	padding-top 10px
+	padding-bottom 10px
+
+.testimonial-img
+	width 160px
+	height 160px
+	image: '/media/bag.jpg'
+	-webkit-border-radius 50%
+	-moz-border-radius 50%
+	border-radius 50%
+	margin-top -105px
+	margin-right 25px
+	margin-left 15px
+	border-width 1px
+	border-style solid
+	border-color c_green
+
+.testimonial-title
+	margin-top 15px
+	+desktop()
+		margin-top -50px
+
+
+
+.app-img
+	width 24em
+	height 16em
+
+for index in (0..2) // 24em 36em 48em
+	size = 24em + index * 12em
+	hsize = 22em + index * 12em
+	vsize = (hsize * 0.677 )
+	@media only screen and (min-width: size )
+		.app-img
+			width hsize
+			height vsize
+
+for index in (0..5) // 60em, 72em, 84em, 96em, 108em, 120em
+	size = 60em + index * 12em
+	hsize = (50em + index * 12em) * (1.0 - index * 0.1 );
+	vsize = (hsize * 0.677 )
+	@media only screen and (min-width: size )
+		.app-img
+			width hsize
+			height vsize
+
+for index in (0..2) // 24em 36em 48em
+	size = 24em + index * 12em
+	hsize = 22em + index * 4em
+	vsize = hsize / 16 * 10
+	@media only screen and (min-width: size )
+		.popup
+			width hsize
+			height vsize
+
+for index in (0..5) // 60em, 72em, 84em, 96em, 108em, 120em
+	size = 60em + index * 12em
+	hsize = 30em + index * 4em
+	vsize = hsize / 16 * 7
+	@media only screen and (min-width: size )
+		.popup
+			width hsize
+			height vsize
+
+.popup
+	z-index -1
+	margin: auto;
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+
+.popup.animated
+	z-index 9999
+
+.general-message
+	padder(25px, 25px)
+
+.general-ok
+	position absolute
+	bottom 15px
+	width 150px
+	left 0
+	right 0
+	margin 0 auto
+
+.app-img
+	margin-top 50px
+	image '/media/devices.png'
+	center(100%)
+
+.mail-form
+	column(1/3, offset: 1/3)
+	+mobile()
+		column(2/3, offset: 1/6)
+	+tablet()
+		column(1/2, offset: 1/4)
+	padder( 100px, 0px )
+
+.mail-input
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+
+.social
+	center(100%)
+	column(2/3, offset: 1/6)
+	+tablet()
+		column(1/3, offset: 1/3)
+	+desktop()
+		column(1/4, offset: 3/8)
+	padder(75px, 0)
+
+.social-card
+	column(1/2)
+
+.simple-popup
+	overflow hidden
+	margin 40px auto
+	max-width 450px
+
+.mail-popup-content
+	center(100%)
+
+.title
+	margin-top 75px
+	center(100%)
+
+.pushy
+	margin-right 10px
+
+.shy
+	margin 15px
+
+.img-center
+	background-repeat no-repeat
+	background-position center
+	background-size contain
+
+.img-fill
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+
+.clouds
+	z-index 10
+	position absolute
+	top 0
+	left 0
+	+mobile()
+		background-image url(/media/clouds_small.svg)
+	+tablet()
+		background-image url(/media/clouds.svg)
+	+desktop()
+		background-image url(/media/clouds.svg)
+
+.cloud-back
+	position absolute
+	top 0
+	left 0
+	+mobile()
+		background-image url(/media/clouds_small.svg)
+	+tablet()
+		background-image url(/media/clouds.svg)
+	+desktop()
+		background-image url(/media/clouds.svg)

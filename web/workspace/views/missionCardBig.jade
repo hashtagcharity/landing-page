@@ -1,0 +1,44 @@
+.row.hN
+	.small-6.medium-6.columns
+		a(data-bind="href: '/pages/mission/' + $data.uid()")
+			.missionImage-big.filled(data-bind="bg: $data.avatar")
+	.small-6.medium-6.columns
+		a(data-bind="href: '/pages/mission/' + $data.uid()")
+			text.HB.h6(data-bind="text: $data.title")
+		.missionContent.row
+			text by 
+			a(data-bind="href: '/pages/profile/' + $data.dreamy()")
+				text.HM(data-bind="text: $data.dreamyName")
+			br
+			br
+			text(data-bind="text: $data.pitchSound")
+			//-text(data-bind="text: $data.description().substring(0,100)+ '...' ")
+			br
+			br
+		.missionProcess
+			span.charity-pin.h6.text-distance
+			text Debrecen, Hungary
+			br
+			br
+			.row.progress-bar.fill-horizontal
+				.progress-step.left
+					.steo.fill-horizontal.bg_p_turquoise
+				.progress-step.left
+					.steo.fill-horizontal.bg_p_turquoise
+				.progress-step.left
+					.steo.fill-horizontal.bg_p_turquoise
+				.progress-step.left
+					.steo.fill-horizontal.bg_dwh
+				.progress-step.left
+					.steo.fill-horizontal.bg_dwh
+			br
+			.row
+				.left.h4
+					span.charity-coin-fill.bubble_pikto.text-distance
+				.left.h4
+					span.charity-care-fill.bubble_pikto.text-distance
+				.left.superscript.c_turquoise
+					| 25
+				.right
+					text.h3.c_turquoise.text-distance 12
+					text Days to go

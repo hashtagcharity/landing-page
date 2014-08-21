@@ -1,0 +1,342 @@
+@import "../../abstract/less/layout";
+@import "../../abstract/less/scale";
+@import "../../abstract/less/colors";
+@import "../../abstract/less/font";
+@import "../../abstract/less/spacing";
+@import "colors";
+
+.title{
+	line-height: 2.5rem;
+}
+
+.tab-title {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+input[type=checkbox] {
+	position: absolute;
+	left: -9999px;
+}
+input[type=checkbox]:hover ~ label {
+	border-color: @gb_turquoise_start;
+}
+
+input[type=checkbox] ~ label {
+	font-family: inherit;
+	font-weight: 900;
+
+	cursor: pointer;
+	user-select: none;
+	display:inline-block;
+
+	background: @clean-white;
+	color: @dark-white;
+
+	padding: 0.0rem 0.35rem;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @light-gray;
+	border-radius: 15%;
+	line-height: 1.25rem;
+	padding-top: 5px;
+}
+input[type=checkbox]:checked ~ label {
+	color: @light-gray;
+}
+
+.tab-border {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: @light-gray;
+}
+
+
+.popup-choice {
+	position: absolute;
+	width: 220px;
+	background: @clean-white;
+	color: @light-gray;
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+	z-index: 100;
+	-webkit-box-shadow: 0px 0px 10px 0px @light-gray;
+	-moz-box-shadow:    0px 0px 10px 0px @light-gray;
+	box-shadow:         0px 0px 10px 0px @light-gray;
+	padding: 15px;
+	display: none;
+}
+.popup-choice:before {
+	content:"";
+	position: absolute;
+	left: 45%;
+	top: -10px;
+	width: 0;
+	height: 0;
+	border-left: 13px solid transparent;
+	border-bottom: 10px solid @clean-white;
+	border-right: 13px solid transparent;
+}
+
+
+.choice, .choice-big, .choice-small{
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	width: 250px;
+}
+
+.choice-small{
+	width: 200px;
+}
+.choice-big{
+	width: 400px;
+}
+
+input{
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.top_margin{
+	margin-top: 30px;
+}
+.bottom_margin{
+	margin-bottom: 20px;
+}
+/*
+a {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+*/
+.big_lines{
+	line-height: 2.5rem;
+}
+.spacy_lines{
+	line-height: 2.0rem;
+}
+
+.mission-row{
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+.missionShowCard{
+	height: 100%;
+	width: 200px;
+}
+
+.stick_left{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	z-index: 2;
+}
+.stick_right{
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	z-index: 2;
+}
+
+.menu_border {
+	width: 2rem;
+	position: absolute;
+	top: 0; left: 30px;
+}
+
+.progress-step{
+	width: 20%; min-width: 20%;
+	padding: 3px;
+}
+
+.progress-step div{
+	height: 0.65rem;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.missionDeck{
+	width: 1160px; min-width: 1160px; max-width: 1160px;
+}
+.missionCard{
+	height: 520px; min-height: 520px; max-height: 520px;
+	width: 270px;
+	float: left;
+	overflow: hidden;
+	margin: 10px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.text-from-distance{
+	margin-left: 10px;
+}
+.text-distance{
+	margin-right: 10px;
+}
+.text-long-distance{
+	margin-right: 20px;
+}
+.superscript{
+	vertical-align: super;
+}
+.missionImage{
+	width: 100%;
+	height: 200px;
+}
+.profileImage{
+	width: 150px;
+	height: 150px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.missionImage-big{
+	width: 100%;
+	height: 350px;
+}
+.missionImage-ultra{
+	width: 100%;
+	height: 450px;
+}
+.missionContent{
+	padding: 15px;
+	height: 175px;
+}
+.missionProcess{
+	padding: 15px;
+	height: 150px;
+}
+
+.mission_big {
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+
+.img-profile-big{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.mission_card {
+	width: 225px;
+	height: 375px;
+	overflow: hidden;
+}
+
+.img-background-card {
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.bottomlay{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+}
+
+.overlay_info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: @light-black;
+}
+
+.control{
+	padding-top: 3.0rem;
+	height: 100%;
+	width: 100%;
+
+	min-height: 650px;
+	min-width: 1000px;
+}
+
+.bottom_line{
+	padding: 1rem;
+	border-bottom: 1px solid @light-gray;
+}
+
+.header{
+	height: 3.0rem;
+	width: 100%;
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 10;
+}
+
+.header .menu{
+	height: 100%;
+	padding-top: 18px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.menu:hover{
+	border-bottom: 2px solid @clean-white;
+    padding-bottom: 2px;
+}
+.header a {
+	color: inherit;
+}
+
+.ribbon_thin{
+	padding-top: 5px;
+}
+.padding-vertical{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.ribbon_thin{ width: 7.5rem; height: 2.5rem; margin-left: 25px; margin-right: 50px; }
+
+.footer{
+	width: 100%; position: relative;
+	overflow: hidden;
+	line-height: 2.0rem;
+}
+
+.white-popup {
+	overflow: hidden;
+	margin: 40px auto;
+	max-width: 500px;
+}
+
+.interaction {
+	width: 900px;
+	height: 700px;
+}
+
+.upload-image {
+	border: 10px dashed #ccc;
+}
+.upload-image.hover {
+	border: 10px dashed #0c0;
+}

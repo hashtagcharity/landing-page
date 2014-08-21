@@ -1,0 +1,34 @@
+doctype html
+html
+	head
+		title Char-IT-y - Pros who care
+		include head
+	body
+		.control.row
+			include title
+
+			#profile-personal.darker-background.band-wide.row
+				.bandLine-wide.h6
+					h3.HUL.text-center Profile Info
+					br
+					include pros/personal
+
+			#profile-missions.light-background.row.h6
+				br
+				h3.HUL.text-center Missions
+				br
+				include pros/missions
+
+
+			#footer.footer.band-small.row.hN
+				.bandLine-small
+					include bands/footer
+
+		include popups/authError
+		include popups/authSuccess
+		include popups/networkError
+		include popups/login
+
+		script(type='text/javascript').
+			services.init( );
+			

@@ -1,0 +1,42 @@
+.missionCard
+	a(data-bind="href: '/pages/mission/' + $data.uid()")
+		.missionImage.filled(data-bind="bg: $data.avatar")
+	.missionContent.text-left.hS
+		a(data-bind="href: '/pages/mission/' + $data.uid()")
+			text.HB(data-bind="text: $data.title") ...
+		br
+		text by 
+		a(data-bind="href: '/pages/profile/' + $data.dreamy()")
+			text.HM(data-bind="text: $data.dreamyName") ...
+		br
+		br
+		text(data-bind="text: $data.pitchSound") ...
+		//- text(data-bind="text: $data.description().substring(0,100) + '...' ") ...
+		br
+	.missionProcess.text-left.hS
+		span.charity-pin.h6.text-distance
+		text Debrecen, Hungary
+		br
+		br
+		.row.progress-bar.fill-horizontal
+			.progress-step.left
+				.steo.fill-horizontal.bg_p_turquoise
+			.progress-step.left
+				.steo.fill-horizontal.bg_p_turquoise
+			.progress-step.left
+				.steo.fill-horizontal.bg_p_turquoise
+			.progress-step.left
+				.steo.fill-horizontal.bg_dwh
+			.progress-step.left
+				.steo.fill-horizontal.bg_dwh
+		br
+		.row
+			.left.h6
+				span.charity-coin-fill.bubble_pikto.text-distance
+			.left.h6
+				span.charity-care-fill.bubble_pikto.text-distance
+			.left.superscript.c_turquoise
+				| 25
+			.right
+				text.h5.c_turquoise.text-distance 12
+				text Days to go

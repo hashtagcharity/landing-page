@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Char-IT-y - Pros who care
+		include head
+	body
+		.control.row.hS
+			include title
+
+			.light-background
+				include miss/title
+
+			.darker-background
+				include miss/content
+
+		#footer
+
+		include popups/authError
+		include popups/authSuccess
+		include popups/networkError
+		include popups/login
+
+		script(type='text/javascript').
+			services.init( );

@@ -1,0 +1,11 @@
+{
+	"pages":{
+		"staticPages": {
+		},
+		"dynmamicPages":{
+			"workspace": {
+				"path": "web/workspace/views/workspace.jade"
+			}
+		}
+	}
+}

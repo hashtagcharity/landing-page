@@ -1,0 +1,34 @@
+{
+	"server":{
+		"port": 8080,
+		"host": "0.0.0.0",
+		"name": "Hashtagcharity",
+		"session":{
+			"name": "Hashtagcharity.sid",
+			"hashSecret": "hv3f1o415f3pk9bxnu88c000wwss29wt"
+		},
+		"fileSizeLimit": 5242880,
+		"storageFolder": "files",
+		"logFile": "server.log",
+		"logLevel": "error"
+	},
+	"mongodb":{
+		"host": "mongo.onmodulus.net",
+		"port": 27017,
+		"user": "board",
+		"pass": "uaCVyUSWSqO6EAQY",
+		"name": "Siqyhe9p"
+	},
+	"mail":{
+		"url": "https://api.mailgun.net/v2/hashtagcharity.org/messages",
+		"api_key": "key-195k6pt8scxfx-60f-qhf22ornmrrlq1",
+		"interest": {
+			"from_email": "info@hashtagcharity.org",
+			"from_name": "#CHARITY",
+			"to": "MAIL_RECIPIENT",
+			"subject": "DO NOT REPLY - Welcome to #charity!",
+			"text": "Thank you for your interest!\n\nWe are working hard building up our platform and help people find worthy causes, apply IT skills and make meaningful difference.\nIf you have any questions, comments or a great idea please contact us - your feedback is appreciated.\n\nWe will keep you posted about our progress,\n#charity Team.",
+			"html": "mailGreetings.html"
+		}
+	}
+}

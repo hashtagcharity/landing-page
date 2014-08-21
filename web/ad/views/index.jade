@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		title #charity
+		include head
+	body
+		.ad
+			#video.page-video.text-center
+				include pages/video
+			#reasons.page.page-reasons.bg_babyblue
+				include pages/reasons
+				#cloud1.clouds.img-center
+			#apps.page.page-app.bg_babyblue
+				#cloud1a.cloud-back.img-center
+				include pages/apps
+			#testimonials.page.page-testimonials.bg_babyblue
+				include pages/testimonials
+				#cloud2.clouds.img-center
+			#interest.page.page-interest.bg_white
+				include pages/interest
+				#cloud4.clouds.img-center
+		include pages/popups
+
+		script(src="/js/ad.js")
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-50876939-1', 'hashtagcharity.org');
+			ga('send', 'pageview');
+

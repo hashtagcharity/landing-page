@@ -1,0 +1,13 @@
+.featured.fill-vertical
+	.columns-9.text-left.fill-vertical
+		#featured-missions-container.fill-vertical
+			#featured-missions-leap.l-unity(leap-bind="{ name:'featured' }", data-bind="foreach: { data: featuredMissions, afterRender: bindFeaturedContent }")
+				.l-page(data-bind="lb: $parent.categories()[ $index() ]").bg_lwh
+					include ../missionCardBig
+
+	.columns-3.hS.big_lines.leaper-selector.row
+		.row(data-bind="foreach: { data: categories, afterRender: bindCategoriesContent }")
+			span.hM.charity-left-fill.text-long-distance.leap-link-pointer
+			a.leap-link(leaper="featured", data-bind="text: $data, click: $root.doLeap") ...
+			br
+		.menu_border.fill-vertical

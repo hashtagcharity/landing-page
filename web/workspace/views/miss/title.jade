@@ -1,0 +1,142 @@
+.row.padding-vertical
+	.medium-10.medium-centered.columns
+		br
+		br
+		.row
+			.medium-10.columns
+				.row
+					text.h1.HM(contenteditable="#{editable}", data-bind="editableText: newMission.title")= doc.title
+					br
+					text by 
+					a(href="/pages/profile/#{doc.dreamy}")
+						text= doc.dreamyName
+					br
+					br
+			.medium-2.columns
+				.profileImage.filled(background='url(/media/category_arc.png)')
+		.row
+			if !editable
+				.medium-6.medium-centered.columns.text-center
+					a(href="#").tab-title.c_turquoise.tab-border
+						text.HM Home
+					a(href="#").tab-title.tab-border
+						text.HM Skillys
+					a(href="#").tab-title
+						text.HM Discussions(26)
+		br
+		br
+		br
+		.row
+			.medium-8.columns
+				if editable
+					.missionImage-ultra#new-avatar.upload-image.filled(background="url(/media/drag_drop.jpg)")
+						progress#new-avatar-progress(min="0", max="100", value="0").fill-horizontal 0
+				else
+					.missionImage-ultra.filled(background="#{doc.avatar}")
+
+				if !editable
+					br
+					.row.progress-bar.fill-horizontal
+						.progress-step.left
+							.steo.fill-horizontal.bg_p_turquoise
+						.progress-step.left
+							.steo.fill-horizontal.bg_p_turquoise
+						.progress-step.left
+							.steo.fill-horizontal.bg_p_turquoise
+						.progress-step.left
+							.steo.fill-horizontal.bg_dwh
+						.progress-step.left
+							.steo.fill-horizontal.bg_dwh
+				br
+				br
+				section(contenteditable="#{editable}", data-bind="editableText: newMission.description")= doc.description
+				br
+				br
+				br
+				.button
+			.medium-4.columns
+				text.h4 Passion sentence
+				br
+				br
+				if editable
+					section.hS(contenteditable="#{editable}", data-bind="editableText: newMission.pitchSound")= doc.pitchSound
+				else
+					section.hS #{ doc.pitchSound }
+				br
+				br
+				br
+				.row
+					if editable
+						.medium-12.columns
+							.left
+								text Volunteer end date:
+								br
+								input#mission-volunteerEndDate(type="text", name="start-date", size="15", data-value="dd.mm.yyyy", data-bind="pickADate: newMission.volunteerEndDate").input.datepicker.hS
+							.right
+								text Project end date:
+								br
+								input#mission-plannedEndDate(type="text", name="end-date", size="15", data-value="dd.mm.yyyy", data-bind="pickADate: newMission.plannedEndDate").input.datepicker.hS
+						.medium-12.columns.top_margin
+							input#new_assistance(type="checkbox", data-bind="checked: newMission.assistance")
+							label(for="new_assistance") ✓
+							text.text-from-distance Need management/IT assistance
+					else
+						.medium-12.medium-centered.columns
+							.left.h4
+								span.charity-care-fill.bubble_pikto
+							.left.superscript.c_turquoise
+								| 25
+							.right
+								text.h3.c_turquoise.text-distance 12
+								text Days to go
+				br
+				br
+				.row
+					text.h4 Desired team
+					br
+					br
+					each skill in doc.requiredSkills
+						text.text-long-distance= skill
+						br
+				br
+				br
+				br
+				br
+				if !editable
+					.row.text-center
+						a(href='#').c_button.bg_turquoise.h6
+							span.charity-aid-fill.text-distance
+							text Join the mission
+						br
+						br
+						br
+						a(href='#').c_button.bg_turquoise.h6
+							span.charity-mail.text-distance
+							text Ask the Dreamy 
+						br
+						br
+						br
+						a(href='#').c_button.bg_turquoise.h6
+							span.charity-coin-fill.text-distance
+							text Support mission
+
+if editable
+	br
+	br
+	.row
+		.medium-10.medium-centered.columns
+			.left
+				a(href='/pages/workspace').c_button.bg_turquoise.h6
+					text Cancel
+
+			.right
+				a(href='javascript:Charity.sendMission();').c_button.bg_turquoise.h6
+					text Launch
+		br
+		br
+		br
+		br
+
+#footer.footer.band-small.row.hN
+	.bandLine-small
+		include ../bands/footer

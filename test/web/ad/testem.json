@@ -1,0 +1,13 @@
+{
+	"framework": "mocha",
+	"serve_files": [ "./dist/www/js/vendor_ad.js", "./dist/testem/ad/ad.instrumented.js", "./dist/testem/ad/all.tests.js" ],
+	"src_files": [
+		"./test/web/ad/*.test.js",
+		"./web/ad/js/*.js"
+	],
+	"test_page": "./test/web/ad/testem.html",
+	"on_start": "gulp browserifyVendorAd",
+	"before_tests": "gulp testemAd --development && istanbul instrument --output ./dist/testem/ad/ad.instrumented.js ./dist/www/js/ad.js",
+	"after_tests": "istanbul report --root ./dist/coverage/web/ad --dir ./dist/coverage/web/ad",
+	"launch_in_dev": [ "Firefox" ]
+}

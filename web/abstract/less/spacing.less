@@ -1,0 +1,89 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+	min-width: 100%; min-height: 100%;
+}
+
+@media only screen {
+	.band, .bandLine, .band-wide, .bandLine-wide, .band-small, .bandLine-small{
+		overflow:hidden;
+	}
+}
+@media only screen and (max-width: 48em) {
+	.band, .band-wide, .band-small {
+		padding-bottom: 45px;
+	}
+	.bandLine, .bandLine-wide, .bandLine-small {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+}
+@media only screen and (min-width: 48.063em) {
+	.band, .band-wide, .band-small {
+		padding: 20px 5px 20px 5px;
+	}
+	.bandLine, .bandLine-wide, .bandLine-small {
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+	}
+}
+
+.sized {
+	//background-image:url(../images/images2.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.filled {
+	//background-image:url(../images/images2.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.horizontal_center_panel {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center_panel {
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+input[type="checkbox"]{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.c_button {
+	padding: 20px 45px 15px 40px!important;
+	border-radius: 2px;
+	cursor: pointer;
+	-webkit-font-smoothing: subpixel-antialiased;
+	letter-spacing: 2px;
+}
+
+.c_small_button {
+	padding: 10px 25px 5px 20px!important;
+	border-radius: 2px;
+	cursor: pointer;
+	-webkit-font-smoothing: subpixel-antialiased;
+	letter-spacing: 2px;
+}
+
+.block{
+	display: block; float: left;
+}

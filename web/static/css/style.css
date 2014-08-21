@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'hashtagcharity';
+	src:url('fonts/hashtagcharity.eot?gf7wtl');
+	src:url('fonts/hashtagcharity.eot?#iefixgf7wtl') format('embedded-opentype'),
+		url('fonts/hashtagcharity.woff?gf7wtl') format('woff'),
+		url('fonts/hashtagcharity.ttf?gf7wtl') format('truetype'),
+		url('fonts/hashtagcharity.svg?gf7wtl#hashtagcharity') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="charity-"], [class*=" charity-"] {
+	font-family: 'hashtagcharity';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.charity-quote:before {
+	content: "\e60c";
+}
+.charity-facebook:before {
+	content: "\e609";
+}
+.charity-google:before {
+	content: "\e60a";
+}
+.charity-twitter:before {
+	content: "\e60b";
+}
+.charity-left:before {
+	content: "\e608";
+}
+.charity-skilly:before {
+	content: "\e602";
+}
+.charity-heart:before {
+	content: "\e603";
+}
+.charity-earth:before {
+	content: "\e604";
+}
+.charity-dreamy:before {
+	content: "\e605";
+}
+.charity-cross:before {
+	content: "\e606";
+}
+.charity-aid:before {
+	content: "\e607";
+}
+.charity-linkedin-fill:before {
+	content: "\e600";
+}
+.charity-right:before {
+	content: "\e601";
+}

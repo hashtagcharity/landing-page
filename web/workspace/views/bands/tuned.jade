@@ -1,0 +1,5 @@
+.tuned-panel
+	#tuned-missions-container.fill-vertical
+		#tuned-missions-leap.l-unity(leap-bind="{ name:'tuned' }", data-bind="foreach: { data: tunedMissions, afterRender: bindTunedContent }")
+			.l-page(data-bind="lb: $index").bg_lwh
+				include ../missionCardBig

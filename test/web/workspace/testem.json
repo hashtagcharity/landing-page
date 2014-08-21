@@ -1,0 +1,13 @@
+{
+	"framework": "mocha",
+	"serve_files": [ "./dist/www/js/vendor_workspace.js", "./dist/testem/workspace/workspace.instrumented.js", "./dist/testem/workspace/all.tests.js" ],
+	"src_files": [
+		"./test/web/workspace/*.test.js",
+		"./web/workspace/js/*.js"
+	],
+	"test_page": "./test/web/workspace/testem.html",
+	"on_start": "gulp browserifyVendorWorkspace",
+	"before_tests": "gulp testemWorkspace --development & istanbul instrument --output ./dist/testem/workspace/workspace.instrumented.js ./dist/www/js/workspace.js",
+	"after_tests": "istanbul report --root ./dist/coverage/web/workspace --dir ./dist/coverage/web/workspace",
+	"launch_in_dev": [ "Firefox" ]
+}

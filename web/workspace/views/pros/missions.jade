@@ -1,0 +1,13 @@
+.row.bottom_margin
+	.medium-6.medium-centered.columns.text-center
+		a(href="javascript:leaper.next( 'profile', 'fadeInLeftBig' );").tab-title.tab-border Launched( #{doc.launched?doc.launched.length:0} )
+		a(href="javascript:leaper.next( 'profile', 'fadeInLeftBig' );").tab-title.tab-border Aided( #{doc.aided?doc.aided.length:0} )
+		a(href="javascript:leaper.next( 'profile', 'fadeInLeftBig' );").tab-title Cared( #{doc.cared?doc.cared.length:0} )
+.row.top_margin
+	#profile-missions-leap.l-unity(leap-bind="{ name:'profile' }").missionDeck.horizontal_center_panel
+		#profile-launched-page.l-page(leap-bind="{ name: 'launched'}", data-bind="foreach: { data: profile.launched, afterRender: bindProfileContent }").bg_wh
+			include ../missionCard
+		#profile-aided-page.l-page(leap-bind="{ name: 'aided'}", data-bind="foreach: { data: profile.aided, afterRender: bindProfileContent }").bg_wh
+			include ../missionCard
+		#profile-cared-page.l-page(leap-bind="{ name: 'cared'}", data-bind="foreach: { data: profile.cared, afterRender: bindProfileContent }").bg_wh
+			include ../missionCard

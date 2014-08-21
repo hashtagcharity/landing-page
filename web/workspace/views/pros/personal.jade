@@ -1,0 +1,37 @@
+.row
+	.medium-10.medium-centered.columns
+		.row
+			.medium-2.columns
+				if doc.avatar
+					.profileImage.filled(background="#{doc.avatar}")
+				else
+					.profileImage.filled(background='url(/media/default-avatar.jpg)')
+			.medium-8.columns.hN
+				span.charity-person.hS.text-distance.c_gray
+				text.HM= doc.name
+				br
+				br
+				span.charity-mail.hS.text-distance.c_gray
+				text= doc.email
+				br
+				span.charity-phone.hS.text-distance.c_gray
+				text= doc.phone
+				br
+				br
+				span.charity-orientation.hS.text-distance.c_gray
+				text= doc.linkedin.industry
+				br
+				span.charity-linkedin.hS.text-distance.c_gray
+				a(href="#{doc.linkedin.publicProfileUrl}") Public profile
+				br
+				br
+				span.charity-skills.hS.text-distance.c_gray
+				if( doc.linkedin.skills )
+					each skill in doc.linkedin.skills
+						text.text-long-distance= skill
+				br
+				br
+				span.charity-summary.hS.text-distance.c_gray
+				text= doc.linkedin.summary
+			.medium-2.columns
+				.profileImage.filled(background='url(/media/category_arc.png)')

@@ -1,0 +1,25 @@
+.logo.img-center.left
+.menu.left
+	a(href='/pages/browse')
+		text Browse
+.menu.left
+	a(href='/pages/mission/new')
+		text Start
+.menu.left
+	a(href='/')
+		text Learn
+if user
+	.menu.right
+		a(href= "#{'/pages/profile/'+user.publicID}")
+			text Profile
+.menu.right
+	if user
+		text Logged as 
+		text= user.name
+	else
+		a(href='javascript:Util.showLoginModal();')
+			text Log in
+if user && user.role === 'admin'
+	.menu.right
+		a(href='#')
+			text Admin

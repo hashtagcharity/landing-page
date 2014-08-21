@@ -1,0 +1,20 @@
+.row.hS.HUL.title.text-center
+	.left
+		text.h3.HUL Popular missions
+	#category-chooser.right.choice
+		a(href="javascript:Charity.openCategories();")
+			text#category-chooser-text Any category
+			span.charity-down.hS
+	.right.choice-big
+		text Skills 
+		input#c-mission-skill(type="text", data-bind="value: selection.skill", size="35").hS
+	.right.choice-small
+		label Nearby 
+		input#c-mission-nearby(type="checkbox", data-bind="checked: selection.nearby")
+		label(for="c-mission-nearby") ✓
+.row.fill-vertical
+	.small-12.medium-12.medium-centered.columns.text-left.fill-vertical
+		#selection-missions-container.fill-vertical
+			#selection-missions-leap.l-unity(leap-bind="{ name:'selection' }", data-bind="foreach: { data: selectedBlocks, afterRender: bindSelectedContent }").missionDeck.center_panel
+				.l-page(data-bind="lb: $index, foreach: { data: $data }")
+					include ../missionCard

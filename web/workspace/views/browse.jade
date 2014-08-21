@@ -1,0 +1,51 @@
+doctype html
+html
+	head
+		title Char-IT-y - Pros who care
+		include head
+	body
+		.control.row.bg_lwh
+			include title
+
+			.medium-12.columns.bg_wh.padding-vertical
+				.row.hS.HUL.title.text-center
+					.left
+						text.h3.HUL Browse missions
+				br
+				.row.hS.HUL.title.text-center
+					.right.choice
+						a(href="javascript:void();")
+							text#category-chooser-text Any category
+							span.charity-down.hS
+					.right.choice
+						a(href="javascript:void();")
+							text#category-chooser-text Any status
+							span.charity-down.hS
+					.right.choice
+						a(href="javascript:void();")
+							text#category-chooser-text Order by Care
+							span.charity-down.hS
+					.right.choice-big
+						text Skills 
+						input#c-mission-skill(type="text", data-bind="value: selection.skill", size="35").hS
+					.right.choice-small
+						label Nearby 
+						input#c-mission-nearby(type="checkbox", data-bind="checked: selection.nearby")
+						label(for="c-mission-nearby") ✓
+				br
+				.row.bg_wh
+					#browse-missions(data-bind="foreach: { data: selectedMissions, afterRender: bindSelectedContent }").bg_wh.missionDeck.horizontal_center_panel
+						include missionCard
+
+			.medium-12.columns
+				#footer.footer.band-small.row.hN
+					.bandLine-small
+						include bands/footer
+
+		include popups/authError
+		include popups/authSuccess
+		include popups/networkError
+		include popups/login
+
+		script(type='text/javascript').
+			services.init( );

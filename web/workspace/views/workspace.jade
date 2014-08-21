@@ -1,0 +1,84 @@
+doctype html
+html
+	head
+		title Char-IT-y - Pros who care
+		include head
+	body
+		.workspace
+			.title.h5.c_white
+				include title
+
+			#featuredMissions.featuredMissions.bg_dark_white.band
+				h3.HL Featured missions
+				include bands/featured
+
+			#missions.missions.bg_light_white.band-wide
+				include bands/selected
+				.text-center.stick_left
+					a(href='javascript:leaper.prev( "selection", "fadeInLeftBig" );')
+						span.charity-left.bubble_dark_navigation
+				.text-center.stick_right
+					a(href='javascript:leaper.next( "selection", "fadeInRightBig" );')
+						span.charity-right.bubble_dark_navigation
+
+			#tuned.tuned.bg_dark_white.band
+				h3.HL Tuned to You
+				include bands/tuned
+				.text-center.stick_left
+					a(href='javascript:leaper.prev( "tuned", "fadeInLeftBig" );')
+						span.charity-left.bubble_dark_navigation
+				.text-center.stick_right
+					a(href='javascript:leaper.next( "tuned", "fadeInRightBig" );')
+						span.charity-right.bubble_dark_navigation
+
+			#footer.footer.band-small.c_light_white
+				.bandLine-small.text-center
+					include bands/footer
+
+		script(src="/js/workspace.js")
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-50876939-1', 'hashtagcharity.org');
+			ga('send', 'pageview');
+		//
+			.control.row
+				include title
+
+				#featuredMissions.darker-background.band.row
+					.bandLine.h6
+						h3.HUL Featured missions
+						include bands/featured
+
+				#missions.light-background.band-wide.row
+					.bandLine-wide
+						include bands/selected
+					.text-center.stick_left
+						a(href='javascript:leaper.prev( "selection", "fadeInLeftBig" );')
+							span.charity-left.bubble_dark_navigation
+					.text-center.stick_right
+						a(href='javascript:leaper.next( "selection", "fadeInRightBig" );')
+							span.charity-right.bubble_dark_navigation
+
+
+				#tuned.darker-background.band.row
+					.bandLine
+						h3.HUL Tuned to You
+						include bands/tuned
+
+				#footer.footer.band-small.row.hN
+					.bandLine-small
+						include bands/footer
+
+
+			include popups/authError
+			include popups/authSuccess
+			include popups/networkError
+			include popups/login
+
+			include popups/choices
+
+			script(type='text/javascript').
+				services.init( Util.getURLParameters('err', false), Util.getURLParameters('res', false), Util.getURLParameters('role', 'dreamy') );

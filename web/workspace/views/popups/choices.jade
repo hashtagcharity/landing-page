@@ -1,0 +1,8 @@
+#category-choices.popup-choice.hS(data-bind="foreach: { data: categories }").spacy_lines
+	a(data-bind='attr: { "href": "javascript:Charity.selectCategory(\'" + $data + "\');" }')
+		text(data-bind="text: $data")
+	br
+//-
+	#status-choices.popup-choice.hS(data-bind="foreach: { data: status }").spacy_lines
+		text(data-bind="text: $data")
+		br
