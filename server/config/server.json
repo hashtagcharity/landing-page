@@ -13,15 +13,15 @@
 		"logLevel": "error"
 	},
 	"mongodb":{
-		"host": "mongo.onmodulus.net",
+		"host": "X_TO_BE_FILLED_X",
 		"port": 27017,
-		"user": "board",
-		"pass": "uaCVyUSWSqO6EAQY",
-		"name": "Siqyhe9p"
+		"user": "X_TO_BE_FILLED_X",
+		"pass": "X_TO_BE_FILLED_X",
+		"name": "X_TO_BE_FILLED_X"
 	},
 	"mail":{
 		"url": "https://api.mailgun.net/v2/hashtagcharity.org/messages",
-		"api_key": "key-195k6pt8scxfx-60f-qhf22ornmrrlq1",
+		"api_key": "X_TO_BE_FILLED_X",
 		"interest": {
 			"from_email": "info@hashtagcharity.org",
 			"from_name": "#CHARITY",
